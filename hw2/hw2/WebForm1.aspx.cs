@@ -20,30 +20,30 @@ namespace hw2
             int b = Convert.ToInt32(txtSanQuan.Text);
             int c = Convert.ToInt32(txtSoyQuan.Text);
             int d = Convert.ToInt32(txtMilQuan.Text);
-            int f = 0 , g = 0 , h = 0, i = 0 , count = a + b + c + d;
+            int t = 0 , count = a + b + c + d;
             
             if (chkSoyPea.Checked)
             {
-                f = 50 * a + 40 * b + 30 * c + 30 * d;
-                lblOutput.Text = "總價:" + f + "<br/>";
+                t = 50 * a + 40 * b + 30 * c + 30 * d;
+                lblOutput.Text = "總價:" + t + "<br/>";
                 lblOutput.Text += "項目數:" + count;
                 if (chkMilPea.Checked)
                 {
-                    g = 50 * a + 40 * b + 25 * c + 35 * d;
-                    lblOutput.Text = "總價:" + g + "<br/>";
+                    t = 50 * a + 40 * b + 30 * c + 35 * d;
+                    lblOutput.Text = "總價:" + t + "<br/>";
                     lblOutput.Text += "項目數:" + count;
-                    if (chkSoyPea.Checked)
-                    {
-                        h = 50 * a + 40 * b + 30 * c + 35 * d;
-                        lblOutput.Text = "總價:" + h + "<br/>";
-                        lblOutput.Text += "項目數:" + count;
-                    }
                 }
+            }
+            else if (chkMilPea.Checked)
+            {
+                 t = 50 * a + 40 * b + 25 * c + 35 * d;
+                 lblOutput.Text = "總價:" + t + "<br/>";
+                 lblOutput.Text += "項目數:" + count;
             }
             else
             {
-                i = 50 * a + 40 * b + 25 * c + 30 * d;
-                lblOutput.Text = "總價:" + i + "<br/>";
+                t = 50 * a + 40 * b + 25 * c + 30 * d;
+                lblOutput.Text = "總價:" + t + "<br/>";
                 lblOutput.Text += "項目數:" + count;
             }
         }
