@@ -13,6 +13,9 @@
         .auto-style2 {
             text-align: center;
         }
+        .auto-style3 {
+            width: 540px;
+        }
     </style>
 </head>
 <body>
@@ -33,7 +36,37 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>&nbsp;</td>
+                    <td>
+                        <table class="auto-style1">
+                            <tr>
+                                <td class="auto-style3">
+                                    <asp:Panel ID="Panel1" runat="server" GroupingText="登入">
+                                        帳號:<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                        &nbsp;
+                                        <br />
+                                        密碼:<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                                        <br />
+                                        確認密碼:<asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                                        <br />
+                                        <br />
+                                        <asp:Button ID="Button1" runat="server" Text="登入" />
+                                    </asp:Panel>
+                                </td>
+                                <td>
+                                    <asp:Panel ID="Panel2" runat="server" GroupingText="註冊" Width="540px">
+                                        帳號:<asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                                        <br />
+                                        密碼:<asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                                        <br />
+                                        確認密碼:<asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                                        <br />
+                                        <br />
+                                        <asp:Button ID="Button2" runat="server" Text="註冊" />
+                                    </asp:Panel>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
                 </tr>
             </table>
         </div>
