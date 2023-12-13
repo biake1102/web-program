@@ -37,6 +37,26 @@
                 </tr>
             </table>
         </div>
+        <asp:Panel ID="Panel1" runat="server" GroupingText="商品最新消息">
+            本商店商品新增以下三張卡片<br /> 
+            <br />
+            <asp:Image ID="Image1" runat="server" ImageUrl="~/images/AGOV-JP054.jpg" />
+            &nbsp;
+            <asp:Image ID="Image2" runat="server" ImageUrl="~/images/AGOV-JP046.jpg" />
+            &nbsp;
+            <asp:Image ID="Image3" runat="server" ImageUrl="~/images/AGOV-JP042.jpg" />
+            <br />
+            <br />
+        </asp:Panel>
+        <asp:Panel ID="Panel2" runat="server" GroupingText="youtube最新消息">
+            <br />
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="https://www.youtube.com/watch?v=ZQ18goDBWCs">最新上傳影片</asp:HyperLink>
+            <br />
+            <br />
+            <asp:Image ID="Image4" runat="server" ImageUrl="~/images/newvideo.jpg" Width="700px" />
+            <br />
+            <br />
+        </asp:Panel>
     </form>
 </body>
 </html>

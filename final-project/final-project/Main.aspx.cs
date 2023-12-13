@@ -27,6 +27,36 @@ namespace final_project
                 no = GridView1.DataKeys[pos].Value.ToString();
                 lblOutput.Text = no +"已加入購物車";
 
+                
+                
+                /*SqlConnection objCon;
+                SqlDataAdapter objDataAdapter;
+                string strDbCon, strSQL;
+                // 資料庫連接字串
+                strDbCon = "Data Source=(LocalDB)\\MSSQLLocalDB;" +
+                     "AttachDbFilename=" +
+                     Server.MapPath("App_Data\\Database.mdf") +
+                     ";Integrated Security=True";
+                // 建立Connection物件
+                objCon = new SqlConnection(strDbCon);
+                objCon.Open(); // 開啟資料庫連接
+                               // 建立DataAdapter物件的SQL指令
+                strSQL = "SELECT * FROM cards";
+                objDataAdapter = new SqlDataAdapter(strSQL, objCon);
+                // 填入DataSet物件
+                DataSet objDataSet = new DataSet();
+                objDataAdapter.Fill(objDataSet, "cards");
+                lblOutput.Text = "資料表記錄: <hr/>";
+                foreach (DataRow objRow in objDataSet.Tables["cards"].Rows)
+                {
+                    lblOutput.Text += objRow["卡號"] + " 已加入購物車 ";
+
+                }
+                objCon.Close(); // 關閉資料庫連接*/
+
+
+
+
                 /*// 連接字串，替換為您的資料庫連接字串
                 string connectionString = "cards";
 
