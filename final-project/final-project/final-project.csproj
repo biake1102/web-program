@@ -108,10 +108,10 @@
     <Content Include="images\unnamed.jpg" />
     <Content Include="images\WPP4-JP049.jpg" />
     <Content Include="images\WPP4-JP061.jpg" />
-    <Content Include="login.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Main.aspx" />
     <Content Include="News.aspx" />
-    <Content Include="shopcar.aspx" />
+    <Content Include="Shopcart.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -125,12 +125,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
@@ -147,12 +147,12 @@
       <DependentUpon>News.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="shopcar.aspx.cs">
-      <DependentUpon>shopcar.aspx</DependentUpon>
+    <Compile Include="Shopcart.aspx.cs">
+      <DependentUpon>Shopcart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="shopcar.aspx.designer.cs">
-      <DependentUpon>shopcar.aspx</DependentUpon>
+    <Compile Include="Shopcart.aspx.designer.cs">
+      <DependentUpon>Shopcart.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

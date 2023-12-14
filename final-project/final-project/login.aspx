@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="final_project.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="final_project.login" %>
 
 <!DOCTYPE html>
 
@@ -34,9 +34,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:HyperLink ID="MainLink" runat="server" Height="80px" ImageUrl="~/images/unnamed.jpg" ImageWidth="80px" NavigateUrl="~/Main.aspx">HyperLink</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/login.aspx">登入&amp;註冊</asp:HyperLink>
+                        <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/Login.aspx">登入&amp;註冊</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="CarLink" runat="server" NavigateUrl="~/shopcar.aspx">購物車</asp:HyperLink>
+                        <asp:HyperLink ID="CarLink" runat="server" NavigateUrl="~/Shopcart.aspx">購物車</asp:HyperLink>
                     </td>
                 </tr>
                 <tr>
@@ -49,13 +49,11 @@
                                         &nbsp;
                                         <br />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToCompare="TextBox3" ControlToValidate="TextBox1" ErrorMessage="尚未註冊或帳號有誤"></asp:CompareValidator>
                                         <br />
                                         密碼:<asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
                                         &nbsp;
                                         <br />
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:CompareValidator ID="CompareValidator3" runat="server" ControlToCompare="TextBox4" ControlToValidate="TextBox2" ErrorMessage="尚未註冊或密碼有誤"></asp:CompareValidator>
                                         <br />
                                         <br />
                                         <br />
@@ -63,6 +61,8 @@
                                         <br />
                                         <asp:Button ID="Button1" runat="server" Text="登入" OnClick="Button1_Click" />
                                         <br />
+                                        <br />
+                                        <asp:Label ID="Label2" runat="server"></asp:Label>
                                         <br />
                                     </asp:Panel>
                                 </td>
@@ -79,13 +79,9 @@
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox4" ErrorMessage="不可為1234" InitialValue="1234"></asp:RequiredFieldValidator>
                                         &nbsp;
-                                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox4" ErrorMessage="不可空白"></asp:RequiredFieldValidator>
                                         <br />
-                                        確認密碼:<asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-                                        &nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="TextBox4" ControlToValidate="TextBox5" ErrorMessage="兩次輸入密碼不同"></asp:CompareValidator>
-                                        &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox5" ErrorMessage="不可空白"></asp:RequiredFieldValidator>
-                                        <br />
+                                        確認密碼:<asp:TextBox ID="TextBox5" runat="server" TextMode="Password"></asp:TextBox>
+                                        &nbsp;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br />
                                         <br />
                                         <br />
                                         <asp:Button ID="Button2" runat="server" Text="註冊" OnClick="Button2_Click" />

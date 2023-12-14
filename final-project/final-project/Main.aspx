@@ -31,9 +31,9 @@
 &nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:HyperLink ID="MainLink" runat="server" Height="80px" ImageUrl="~/images/unnamed.jpg" ImageWidth="80px" NavigateUrl="~/Main.aspx">HyperLink</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/login.aspx">登入&amp;註冊</asp:HyperLink>
+                        <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/Login.aspx">登入&amp;註冊</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="CarLink" runat="server" NavigateUrl="~/shopcar.aspx">購物車</asp:HyperLink>
+                        <asp:HyperLink ID="CarLink" runat="server" NavigateUrl="~/Shopcart.aspx">購物車</asp:HyperLink>
                     </td>
                 </tr>
                 
@@ -44,12 +44,12 @@
                         <asp:Panel ID="Panel1" runat="server" GroupingText="商品">
                             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="卡號" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand"  PageSize="5" Width="1118px">
                                 <Columns>
-                                    <asp:ImageField DataImageUrlField="卡號" DataImageUrlFormatString="~/images/{0}.jpg" HeaderText="卡圖">
+                                    <asp:ImageField DataImageUrlField="卡號" DataImageUrlFormatString="~/images/{0}.jpg" HeaderText="卡圖" ReadOnly="True">
                                     </asp:ImageField>
                                     <asp:BoundField DataField="卡號" HeaderText="卡號" ReadOnly="True" />
-                                    <asp:BoundField DataField="卡名" HeaderText="卡名" />
-                                    <asp:BoundField DataField="價格" HeaderText="價格" />
-                                    <asp:BoundField DataField="類別" HeaderText="類別" SortExpression="類別" />
+                                    <asp:BoundField DataField="卡名" HeaderText="卡名" ReadOnly="True" />
+                                    <asp:BoundField DataField="價格" HeaderText="價格" ReadOnly="True" />
+                                    <asp:BoundField DataField="類別" HeaderText="類別" SortExpression="類別" ReadOnly="True" />
                                     <asp:BoundField DataField="購買數量" HeaderText="購買數量" />
                                     <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="加入購物車" ShowHeader="True" Text="加入購物車" />
                                 </Columns>
