@@ -29,8 +29,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/Login.aspx">登入&amp;註冊</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="CarLink" runat="server" NavigateUrl="~/Shopcart.aspx">購物車</asp:HyperLink>
-                    </td>
+                        </td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>

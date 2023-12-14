@@ -40,5 +40,16 @@ namespace final_project
                 }
             }
         }
+
+        protected void viewcart_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < itemlist.Items.Count; i++)
+            {
+                if (itemlist.Items[i].Selected == true)
+                {
+                    Response.Redirect("Shopcart.aspx");
+                }
+            }
+        }
     }
 }

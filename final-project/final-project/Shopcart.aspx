@@ -29,8 +29,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/Login.aspx">登入&amp;註冊</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="CarLink" runat="server" NavigateUrl="~/shopcar.aspx">購物車</asp:HyperLink>
-                    </td>
+                        </td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
@@ -44,9 +43,9 @@
             <asp:Label ID="total" runat="server"></asp:Label>
             <br />
             <br />
-            <asp:Button ID="caltotal" runat="server" Text="計算總價" />
+            <asp:Button ID="caltotal" runat="server" Text="計算總價" OnClick="caltotal_Click" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="buy" runat="server" Text="購買" />
+            <asp:Button ID="buy" runat="server" Text="購買" OnClick="buy_Click" />
         </asp:Panel>
     </form>
 </body>

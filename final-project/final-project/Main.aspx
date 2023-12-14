@@ -31,8 +31,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/Login.aspx">登入&amp;註冊</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="CarLink" runat="server" NavigateUrl="~/Shopcart.aspx">購物車</asp:HyperLink>
-                    </td>
+                        </td>
                 </tr>
                 
                 <tr>
@@ -42,14 +41,13 @@
                         <asp:Panel ID="Panel1" runat="server" GroupingText="商品">
                             <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="卡號" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand"  PageSize="5" Width="1118px">
                                 <Columns>
-                                    <asp:ImageField DataImageUrlField="卡號" DataImageUrlFormatString="~/images/{0}.jpg" HeaderText="卡圖" ReadOnly="True">
+                                    <asp:ImageField DataImageUrlField="卡號" DataImageUrlFormatString="~/images/{0}.jpg" HeaderText="卡圖">
                                     </asp:ImageField>
                                     <asp:BoundField DataField="卡號" HeaderText="卡號" ReadOnly="True" />
-                                    <asp:BoundField DataField="卡名" HeaderText="卡名" ReadOnly="True" />
-                                    <asp:BoundField DataField="價格" HeaderText="價格" ReadOnly="True" />
-                                    <asp:BoundField DataField="類別" HeaderText="類別" SortExpression="類別" ReadOnly="True" />
+                                    <asp:BoundField DataField="卡名" HeaderText="卡名" />
+                                    <asp:BoundField DataField="價格" HeaderText="價格" />
+                                    <asp:BoundField DataField="類別" HeaderText="類別" SortExpression="類別" />
                                     <asp:BoundField DataField="購買數量" HeaderText="購買數量" />
-                                    <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="加入購物車" ShowHeader="True" Text="加入購物車" />
                                 </Columns>
                                 <PagerSettings Mode="NextPrevious" NextPageText="下一頁" PreviousPageText="上一頁" />
                             </asp:GridView>
@@ -87,9 +85,29 @@
                             </asp:CheckBoxList>
                             <br />
                             <asp:Button ID="incart" runat="server" OnClick="incart_Click" Text="加入購物車" />
-                            &nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Button ID="viewcart" runat="server" OnClick="viewcart_Click" Text="查看購物車" />
                         </asp:Panel>
                         <br />
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" DeleteCommand="DELETE FROM [cards] WHERE [卡號] = @卡號" InsertCommand="INSERT INTO [cards] ([卡號], [卡名], [價格], [類別], [購買數量]) VALUES (@卡號, @卡名, @價格, @類別, @購買數量)" SelectCommand="SELECT * FROM [cards]" UpdateCommand="UPDATE [cards] SET [卡名] = @卡名, [價格] = @價格, [類別] = @類別, [購買數量] = @購買數量 WHERE [卡號] = @卡號">
+                            <DeleteParameters>
+                                <asp:Parameter Name="卡號" Type="String" />
+                            </DeleteParameters>
+                            <InsertParameters>
+                                <asp:Parameter Name="卡號" Type="String" />
+                                <asp:Parameter Name="卡名" Type="String" />
+                                <asp:Parameter Name="價格" Type="String" />
+                                <asp:Parameter Name="類別" Type="String" />
+                                <asp:Parameter Name="購買數量" Type="Int32" />
+                            </InsertParameters>
+                            <UpdateParameters>
+                                <asp:Parameter Name="卡名" Type="String" />
+                                <asp:Parameter Name="價格" Type="String" />
+                                <asp:Parameter Name="類別" Type="String" />
+                                <asp:Parameter Name="購買數量" Type="Int32" />
+                                <asp:Parameter Name="卡號" Type="String" />
+                            </UpdateParameters>
+                        </asp:SqlDataSource>
                         <br />
                         <br />
                     </td>

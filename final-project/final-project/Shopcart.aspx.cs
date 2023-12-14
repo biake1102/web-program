@@ -12,7 +12,6 @@ namespace final_project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session.Timeout = 1;
             //用逗號分隔開的字串;去掉重複值
             string[] sarray = Session["goods"].ToString().Split(','); 
             
@@ -39,7 +38,17 @@ namespace final_project
                     goodslist.Items.Add(a2[i]);
                 }
             }
+            Session["goods"] = "";//清除
 
+        }
+
+        protected void buy_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void caltotal_Click(object sender, EventArgs e)
+        {
 
         }
     }
