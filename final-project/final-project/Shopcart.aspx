@@ -37,6 +37,17 @@
                 </tr>
             </table>
         </div>
+        <asp:Panel ID="Panel1" runat="server" GroupingText="已加入購物車的商品">
+            <asp:CheckBoxList ID="goodslist" runat="server">
+            </asp:CheckBoxList>
+            <br />
+            <asp:Label ID="total" runat="server"></asp:Label>
+            <br />
+            <br />
+            <asp:Button ID="caltotal" runat="server" Text="計算總價" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="buy" runat="server" Text="購買" />
+        </asp:Panel>
     </form>
 </body>
 </html>
