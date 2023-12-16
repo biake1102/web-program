@@ -12,6 +12,7 @@
         }
         .auto-style2 {
             text-align: center;
+            height: 84px;
         }
         .auto-style3 {
             width: 540px;
@@ -21,6 +22,7 @@
             height: 350px;
         }
     </style>
+    <link href="StyleSheet1.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -36,6 +38,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/Login.aspx">登入&amp;註冊</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="Cartlink" runat="server" NavigateUrl="~/Shopcart.aspx">購物車</asp:HyperLink>
                         </td>
                 </tr>
                 <tr>

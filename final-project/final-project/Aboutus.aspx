@@ -12,6 +12,7 @@
         }
         .auto-style2 {
             text-align: center;
+            height: 84px;
         }
     </style>
 </head>
@@ -29,6 +30,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/Login.aspx">登入&amp;註冊</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="Cartlink" runat="server" NavigateUrl="~/Shopcart.aspx">購物車</asp:HyperLink>
                         </td>
                 </tr>
                 <tr>

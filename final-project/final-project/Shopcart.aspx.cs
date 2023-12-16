@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace final_project
 {
@@ -12,44 +14,32 @@ namespace final_project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //用逗號分隔開的字串;去掉重複值
-            string[] sarray = Session["goods"].ToString().Split(','); 
-            
-            ArrayList a1= new ArrayList();
-            
-            for(int i = 0; i < sarray.Length; i++) {
-                if (a1.Contains(sarray[i]) == false)//判斷是否存在
-                {
-                    a1.Add(sarray[i]);//加入不存在的
-                }
-            }
-            
-            //ArrayList轉換成string[]
-            string[] a2 = new string[a1.Count];
-            for (int i = 0;i < a1.Count; i++) {
-                a2[i] = a1[i].ToString();
-            }
-
-            //將多組商品加入CheckBoxList
-            for(int i = 0;i < a2.Length; i++)
+            if (Session["tmp"] != null)
             {
-                if (a2[i] != "")
-                {
-                    goodslist.Items.Add(a2[i]);
-                }
+                TextBox1.Text = Session["tmp"].ToString();
+                TextBox1.Text = TextBox1.Text.Replace("!", "\n");
             }
-            Session["goods"] = "";//清除
-
+            else
+            {
+                TextBox1.Text = "購物車是空的!";
+            }
         }
+
+        
 
         protected void buy_Click(object sender, EventArgs e)
         {
-
+            if (Session["tmp"] != null)
+            {
+                output.Text = "購買成功!";
+                TextBox1.Text = "";
+            }
+            else
+            {
+                output.Text = "尚未選擇購買商品!";
+            }    
         }
 
-        protected void caltotal_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

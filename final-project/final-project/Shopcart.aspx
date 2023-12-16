@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Shopcart.aspx.cs" Inherits="final_project.shopcar" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Shopcart.aspx.cs" Inherits="final_project.shopcar" Theme="" %>
 
 <!DOCTYPE html>
 
@@ -12,6 +12,7 @@
         }
         .auto-style2 {
             text-align: center;
+            height: 84px;
         }
     </style>
 </head>
@@ -29,6 +30,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/Login.aspx">登入&amp;註冊</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:HyperLink ID="Cartlink" runat="server" NavigateUrl="~/Shopcart.aspx">購物車</asp:HyperLink>
                         </td>
                 </tr>
                 <tr>
@@ -37,15 +39,12 @@
             </table>
         </div>
         <asp:Panel ID="Panel1" runat="server" GroupingText="已加入購物車的商品">
-            <asp:CheckBoxList ID="goodslist" runat="server">
-            </asp:CheckBoxList>
-            <br />
-            <asp:Label ID="total" runat="server"></asp:Label>
+            <asp:TextBox ID="TextBox1" runat="server" BackColor="White" BorderColor="White" BorderStyle="None" Enabled="False" Height="236px" ReadOnly="True" TextMode="MultiLine" Width="609px"></asp:TextBox>
             <br />
             <br />
-            <asp:Button ID="caltotal" runat="server" Text="計算總價" OnClick="caltotal_Click" />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="buy" runat="server" Text="購買" OnClick="buy_Click" />
+            <asp:Label ID="output" runat="server"></asp:Label>
+            <br />
+            <asp:Button ID="buy" runat="server" OnClick="buy_Click" Text="購買" />
         </asp:Panel>
     </form>
 </body>

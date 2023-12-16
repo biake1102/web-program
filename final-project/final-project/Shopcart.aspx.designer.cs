@@ -60,6 +60,15 @@ namespace final_project
         protected global::System.Web.UI.WebControls.HyperLink LoginLink;
 
         /// <summary>
+        /// Cartlink 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink Cartlink;
+
+        /// <summary>
         /// Panel1 控制項。
         /// </summary>
         /// <remarks>
@@ -69,31 +78,22 @@ namespace final_project
         protected global::System.Web.UI.WebControls.Panel Panel1;
 
         /// <summary>
-        /// goodslist 控制項。
+        /// TextBox1 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList goodslist;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
 
         /// <summary>
-        /// total 控制項。
+        /// output 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label total;
-
-        /// <summary>
-        /// caltotal 控制項。
-        /// </summary>
-        /// <remarks>
-        /// 自動產生的欄位。
-        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button caltotal;
+        protected global::System.Web.UI.WebControls.Label output;
 
         /// <summary>
         /// buy 控制項。

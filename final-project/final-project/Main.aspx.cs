@@ -21,35 +21,27 @@ namespace final_project
         {
             int pos;
             string no;
+            int count = 0;
+            string tmp ; 
+            List<string> item = new List<string>();
+            List<string> itemprice = new List<string>();
+
             if (e.CommandName == "Select")
             {
                 pos = Convert.ToInt32(e.CommandArgument);
                 no = GridView1.DataKeys[pos].Value.ToString();
-                lblOutput.Text = no +"已加入購物車";
-
+                string price = GridView1.Rows[pos].Cells[3].Text;
                 
-            }
-        }
-        
-        protected void incart_Click(object sender, EventArgs e)
-        {
-            for(int i = 0; i < itemlist.Items.Count; i++)
-            {
-                if (itemlist.Items[i].Selected == true) {
-                    Session["goods"] += itemlist.Items[i].Text + ",";
-                }
-            }
-        }
+                item.Add(no);
+                itemprice.Add(price);
+                lblOutput.Text = item[count] + "已加入購物車";
 
-        protected void viewcart_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < itemlist.Items.Count; i++)
-            {
-                if (itemlist.Items[i].Selected == true)
-                {
-                    Response.Redirect("Shopcart.aspx");
-                }
-            }
+                TextBox1.Text += item[count] + " " + itemprice[count] + "元" + "!" +"\n";
+                
+                tmp = TextBox1.Text;
+                Session["tmp"] = TextBox1.Text;
+                count++;
+            }                        
         }
     }
 }
