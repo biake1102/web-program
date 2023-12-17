@@ -7,42 +7,45 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <style type="text/css">
-        .auto-style1 {
-            text-align: left;
-        }
         .auto-style4 {
             text-align: center;
         }
         .auto-style2 {
             text-align: center;
             height: 84px;
+            background-color: #FAEAD3;
+        }
+        .auto-style6 {
+            text-align: left;
+            height: 497px;
         }
     </style>
+    <link href="StyleSheet1.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body class="auto-style2複本">
     <form id="form1" runat="server">
         <div class="auto-style2">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="NewsLink" runat="server" NavigateUrl="~/News.aspx">最新消息</asp:HyperLink>
+                        <asp:HyperLink ID="NewsLink" runat="server" NavigateUrl="~/News.aspx" BackColor="#F5B1AA" Font-Bold="True" Font-Size="X-Large" Font-Underline="False">最新消息</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="AboutLink" runat="server" NavigateUrl="~/Aboutus.aspx">關於我們</asp:HyperLink>
+                        <asp:HyperLink ID="AboutLink" runat="server" NavigateUrl="~/Aboutus.aspx" BackColor="#F5B1AA" Font-Bold="True" Font-Size="X-Large">關於我們</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:HyperLink ID="MainLink" runat="server" Height="80px" ImageUrl="~/images/unnamed.jpg" ImageWidth="80px" NavigateUrl="~/Main.aspx">HyperLink</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/Login.aspx">登入&amp;註冊</asp:HyperLink>
+                        <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/Login.aspx" BackColor="#F5B1AA" Font-Bold="True" Font-Size="X-Large">登入&amp;註冊</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="Cartlink" runat="server" NavigateUrl="~/Shopcart.aspx">購物車</asp:HyperLink>
+                        <asp:HyperLink ID="Cartlink" runat="server" NavigateUrl="~/Shopcart.aspx" BackColor="#F5B1AA" Font-Bold="True" Font-Size="X-Large">購物車</asp:HyperLink>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <table class="auto-style2">
                                 
                 <tr>
-                    <td class="auto-style1">
+                    <td class="auto-style6">
                         <asp:Label ID="lblOutput" runat="server"></asp:Label>
                         <asp:TextBox ID="TextBox1" runat="server" BackColor="White" BorderColor="White" BorderStyle="None" Enabled="False" ReadOnly="True" TextMode="MultiLine" Visible="False" Width="481px"></asp:TextBox>
                         <br />
-                        <asp:Panel ID="Panel1" runat="server" GroupingText="商品">
+                        <asp:Panel ID="Panel1" runat="server" GroupingText="商品" Width="1250px">
                             <div class="auto-style4">
-                                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="卡號" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand" PageSize="5" Width="1118px">
+                                <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="卡號" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand" PageSize="5" Width="1118px" BorderColor="#F5B1AA" BorderStyle="Double" BorderWidth="5px">
                                     <Columns>
                                         <asp:ImageField DataImageUrlField="卡號" DataImageUrlFormatString="~/images/{0}.jpg" HeaderText="卡圖">
                                         </asp:ImageField>
@@ -51,7 +54,10 @@
                                         <asp:BoundField DataField="價格" HeaderText="價格" InsertVisible="False" />
                                         <asp:BoundField DataField="類別" HeaderText="類別" InsertVisible="False" SortExpression="類別" />
                                         <asp:BoundField DataField="購買數量" HeaderText="購買數量" Visible="False" />
-                                        <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="購物車" InsertVisible="False" Text="加入購物車" />
+                                        <asp:ButtonField ButtonType="Button" CommandName="Select" HeaderText="購物車" InsertVisible="False" Text="加入購物車" >
+                                        <ControlStyle BackColor="#F5B1AA" BorderColor="#FF6600" BorderStyle="Solid" BorderWidth="1px" Font-Bold="True" Font-Size="Large" />
+                                        <ItemStyle Font-Bold="False" Font-Size="Small" />
+                                        </asp:ButtonField>
                                     </Columns>
                                     <PagerSettings Mode="NextPreviousFirstLast" NextPageText="下一頁" PreviousPageText="上一頁" />
                                 </asp:GridView>

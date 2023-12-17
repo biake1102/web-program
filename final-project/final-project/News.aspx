@@ -13,32 +13,31 @@
         .auto-style2 {
             text-align: center;
             height: 84px;
+            background-color: #FAEAD3;
         }
     </style>
+    <link href="StyleSheet1.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body class="auto-style2複本">
     <form id="form1" runat="server">
         <div>
             <table class="auto-style1">
                 <tr>
                     <td class="auto-style2">
-                        <asp:HyperLink ID="NewsLink" runat="server" NavigateUrl="~/News.aspx">最新消息</asp:HyperLink>
+                        &nbsp;<asp:HyperLink ID="NewsLink" runat="server" NavigateUrl="~/News.aspx" BackColor="#F5B1AA" Font-Bold="True" Font-Size="X-Large" Font-Underline="False">最新消息</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="AboutLink" runat="server" NavigateUrl="~/Aboutus.aspx">關於我們</asp:HyperLink>
+                        <asp:HyperLink ID="AboutLink" runat="server" NavigateUrl="~/Aboutus.aspx" BackColor="#F5B1AA" Font-Bold="True" Font-Size="X-Large">關於我們</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:HyperLink ID="MainLink" runat="server" Height="80px" ImageUrl="~/images/unnamed.jpg" ImageWidth="80px" NavigateUrl="~/Main.aspx">HyperLink</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/Login.aspx">登入&amp;註冊</asp:HyperLink>
+                        <asp:HyperLink ID="LoginLink" runat="server" NavigateUrl="~/Login.aspx" BackColor="#F5B1AA" Font-Bold="True" Font-Size="X-Large">登入&amp;註冊</asp:HyperLink>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:HyperLink ID="Cartlink" runat="server" NavigateUrl="~/Shopcart.aspx">購物車</asp:HyperLink>
-                        </td>
+                        <asp:HyperLink ID="Cartlink" runat="server" NavigateUrl="~/Shopcart.aspx" BackColor="#F5B1AA" Font-Bold="True" Font-Size="X-Large">購物車</asp:HyperLink>
+                        &nbsp;</td>
                 </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                </tr>
-            </table>
+                </table>
         </div>
-        <asp:Panel ID="Panel1" runat="server" GroupingText="商品最新消息">
+        <asp:Panel ID="Panel1" runat="server" GroupingText="商品最新消息" BackColor="#FAEAD3" BorderColor="#F5B1AA" BorderStyle="Double" BorderWidth="10px">
             本商店商品新增以下三張卡片<br /> 
             <br />
             <asp:Image ID="Image1" runat="server" ImageUrl="~/images/AGOV-JP054.jpg" />
@@ -49,7 +48,7 @@
             <br />
             <br />
         </asp:Panel>
-        <asp:Panel ID="Panel2" runat="server" GroupingText="youtube最新消息">
+        <asp:Panel ID="Panel2" runat="server" GroupingText="youtube最新消息" BackColor="#FAEAD3" BorderColor="#F5B1AA" BorderStyle="Double" BorderWidth="10px">
             <br />
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="https://www.youtube.com/watch?v=ZQ18goDBWCs">最新上傳影片</asp:HyperLink>
             <br />
